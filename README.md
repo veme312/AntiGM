@@ -8,4 +8,4 @@
 ## Permission:
 antigm - Запрещает бить в Creative/Fly
 ## Поддержка:
-Плагин тестировался на Tesseract и PMMP основанном на PocketMine.
+Плагин тестировался на ядрах Tesseract и PMMP основанных на PocketMine.
