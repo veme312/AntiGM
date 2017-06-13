@@ -10,7 +10,7 @@
   
     class Main extends PluginBase implements Listener{
         public function onEnable(){
-             $this->getLogger()->info("§l§fПлагин успешно замущен");
+             $this->getLogger()->info("§l§fПлагин успешно загружен!");
              $this->getServer()->getPluginManager()->registerEvents($this, $this);
           }
         public function antiBoom(EntityExplodeEvent $e){
@@ -22,10 +22,8 @@
                if($dmg instanceof Player && $en instanceof Player){
                 if($dmg->getGameMode() == 1){
                    $e->setCancelled(true);
-                   $dmg->sendTitle("§6В ГМ нельзя", "");
                    }elseif(
                    $dmg->isFlying() != null){
-                   $dmg->sendTitle("§6В полёте нельзя", "");
             }
           }
       }
