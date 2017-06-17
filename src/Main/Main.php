@@ -20,15 +20,16 @@
         
 		public function antiDmg(EntityDamageEvent $e){
 			$en = $e->getEntity();
-			$dmg = $e->getDamager();
+			if($e instanceof EntityDamageByEntityEvent){
+				$dmg = $e->getDamager();
 				if($dmg instanceof Player && $en instanceof Player){
-				if($dmg->hasPermission("antigm")){
-				if($dmg->getGameMode() == 1){
-					$e->setCancelled(true);
-				}elseif(
-					$dmg->isFlying() != null){
+					if($dmg->hasPermission("antigm")){
+						if($dmg->getGameMode() == 1){
+							$e->setCancelled(true);
+						}elseif($dmg->isFlying() != null){
+						}
+					}
 				}
 			}
 		}
 	}
-}
